@@ -1,0 +1,35 @@
+{
+  "options": {
+    "port": 8080,
+    "baseUrl": "",
+    "domains": [
+      "localhost:8080",
+      "127.0.0.1:8080"
+    ],
+    "maxzoom": 14
+  },
+  "styles": {
+    "basic": {
+      "style": "basic.json",
+      "tilejson": {
+        "type": "overlay",
+        "bounds": [8.44806, 47.32023, 8.62537, 47.43468]
+      }
+    },
+    "hybrid": {
+      "style": "satellite-hybrid.json",
+      "serve_rendered": false,
+      "tilejson": {
+        "format": "webp"
+      }
+    },
+    "remote": {
+      "style": "https://demotiles.maplibre.org/style.json"
+    }
+  },
+  "data": {
+    "my_vector_data": {
+      "pmtiles": "./pmtiles/railroads.pmtiles"
+    }
+  }
+}

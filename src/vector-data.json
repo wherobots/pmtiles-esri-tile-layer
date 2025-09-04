@@ -1,0 +1,19 @@
+{
+  "tiles": [
+    "http://localhost:8080/data/my_vector_data/{z}/{x}/{y}.pbf",
+    "http://127.0.0.1:8080/data/my_vector_data/{z}/{x}/{y}.pbf"
+  ],
+  "name": "my_vector_data",
+  "format": "pbf",
+  "tilesetType": "overlay",
+  "vector_layers": [
+    {
+      "id": "railroads"
+    }
+  ],
+  "minzoom": 0,
+  "maxzoom": 15,
+  "bounds": [-102.4905659, 38.7162465, -101.1929529, 39.7138158],
+  "center": [-101.8417594, 39.2150312, 4],
+  "tilejson": "2.0.0"
+}

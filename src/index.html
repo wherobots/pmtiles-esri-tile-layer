@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>ArcGIS Maps SDK for JavaScript: Add a vector tile layer</title>
+
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.32/"></script>
+    <script>
+
+        require([
+            "esri/config",
+            "esri/Map",
+
+            "esri/layers/VectorTileLayer",
+
+            "esri/views/MapView"
+
+        ], function (esriConfig, Map, VectorTileLayer, MapView) {
+
+            console.log("creating the vTile layer")
+            const vtlLayer = new VectorTileLayer({
+                url: "http://localhost:8080/data/my_vector_data/",
+                copyright: "My own data",
+                title: "My Vector Tile Layer",
+                style: {
+                    "version": 8,
+                    "sources": {
+                        "esri": {
+                            "type": "vector",
+                            "url": "http://localhost:8080/data/my_vector_data.json",
+                        }
+                    },
+                    "layers": [
+                    {
+                        "id": "railroads",
+                        "source": "esri",
+                        "source-layer": "railroads",
+                        "type": "line",
+                        "paint": {"line-color": "#198EC8"}
+                    }
+                ]
+                },
+
+            });
+            console.log("add api key")
+
+            esriConfig.apiKey = "";
+
+            console.log("creating the map")
+            const map = new Map({
+
+                basemap: "arcgis/light-gray",
+
+                layers: [vtlLayer]
+            });
+
+            console.log("creating the view")
+            const view = new MapView({
+                container: "viewDiv",
+                center: [-112.020768,41.4619324],
+                zoom: 3,
+                map: map
+            });
+            console.log("view ready")
+
+            console.log(view)
+        });
+
+
+    </script>
+</head>
+
+<body>
+<div id="viewDiv"></div>
+</body>
+</html>
