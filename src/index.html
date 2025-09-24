@@ -5,7 +5,7 @@
             name="viewport"
             content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <title>ArcGIS Maps SDK for JavaScript: Add a vector tile layer</title>
+    <title>PMTiles in ESRI</title>
 
     <style>
         html,
@@ -25,14 +25,10 @@
         require([
             "esri/config",
             "esri/Map",
-
             "esri/layers/VectorTileLayer",
-
             "esri/views/MapView"
-
         ], function (esriConfig, Map, VectorTileLayer, MapView) {
 
-            console.log("creating the vTile layer")
             const vtlLayer = new VectorTileLayer({
                 url: "http://localhost:8080/data/my_vector_data/",
                 copyright: "My own data",
@@ -51,34 +47,31 @@
                         "source": "esri",
                         "source-layer": "railroads",
                         "type": "line",
-                        "paint": {"line-color": "#198EC8"}
+                        "paint": {"line-color": "#4dc819"}
                     }
                 ]
                 },
 
             });
-            console.log("add api key")
 
+            // Add your api key here!!
             esriConfig.apiKey = "";
 
-            console.log("creating the map")
             const map = new Map({
-
-                basemap: "arcgis/light-gray",
-
+                basemap: "arcgis/dark-gray",
                 layers: [vtlLayer]
             });
 
-            console.log("creating the view")
             const view = new MapView({
                 container: "viewDiv",
-                center: [-112.020768,41.4619324],
-                zoom: 3,
-                map: map
+                center: [-100.0843875,31.196283],
+                zoom: 5,
+                map: map,
+                constraints: {
+                    snapToZoom: false
+                }
             });
-            console.log("view ready")
 
-            console.log(view)
         });
 
 
