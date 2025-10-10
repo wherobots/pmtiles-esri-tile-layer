@@ -18,12 +18,12 @@ This project demonstrates how to render PMTiles vector data using ESRI's ArcGIS 
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd <project-directory>
+   git clone https://github.com/wherobots/pmtiles-esri-tile-layer.git
+   cd pmtiles-esri-tile-layer
    ```
 
 2. **Add your PMTiles data**:
-   - Download your PMTiles file from Wherobots Managed storage
+   - Download your PMTiles file from Wherobots managed storage 
    - Place it in the `src/pmtiles/` directory
    - Verify the filename matches the configuration in `src/config.json` (default: `railroads.pmtiles`)
 
