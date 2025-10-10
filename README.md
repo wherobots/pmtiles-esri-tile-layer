@@ -1,6 +1,6 @@
 # Visualizing PMTiles with Esri Maps SDK
 
-This project demonstrates how to render PMTiles vector data using ESRI's Maps SDK for JavaScript with a local tile server.
+This project demonstrates how to render PMTiles vector data using Esri's Maps SDK for JavaScript with a local tile server.
 
 ## Requirements
 
