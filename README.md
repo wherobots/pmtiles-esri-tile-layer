@@ -2,6 +2,14 @@
 
 This project demonstrates how to render PMTiles vector data using Esri's Maps SDK for JavaScript with a local tile server.
 
+## Before you get started
+
+This repo is a part of a hands-on project that shows you how to generate and visualize PMTiles. It consists of three parts:
+
+1. [**Blog Post:**](https://wherobots.com/pmtiles-rendered-in-esri-maps-api/)  A quick post that introduces and showcases this capability.
+2. [**Jupyter Notebook:**](https://cloud.wherobots.com/notebooks/jw6r066ank5aoc/generate-pmtiles-for-railroad-dataset) The practical, step-by-step code for generating the PMTiles file.
+3. **This Repo:** Contains a tile server and the client-side code using the **Esri JavaScript SDK** to render your PMTiles on a basemap.
+
 ## Requirements
 
 - **ArcGIS API Key**: Create one at [ArcGIS Developer](https://developers.arcgis.com/documentation/security-and-authentication/api-key-authentication/tutorials/create-an-api-key/)
